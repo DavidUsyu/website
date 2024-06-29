@@ -4,7 +4,7 @@
 }
 
 .main{
-    width: 100%;
+    width: 1200px;
     background: linear-gradient(to top,rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%),url(messi.jpg);
     background-position: center;
     background-size: cover;
@@ -31,9 +31,9 @@
 
 }
 .menu {
-    width: 400px;
+    width: auto;
     float: left;
-    height: 70px;
+    height: 50px;
 }
 ul{
     float: left;
@@ -89,8 +89,9 @@ ul li a:hover{
   font-size: auto;   
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: wheat;
-  padding: auto;
+  padding-left: 22pc;
   border-radius: 0.1px;
+  margin-top: -5px;
 }
 .text{
     font-size: large;
@@ -123,7 +124,7 @@ ul li a:hover{
 .games h1{
     font-family: 'Times New Roman';
     font-size: 50px;
-    padding-left: 10px;
+    padding-left: 250px;
     margin-top: auto;
     letter-spacing: 2px;
     color: bisque;
@@ -165,7 +166,11 @@ header {
     background:linear-gradient(to top,rgba(0,0,0,0)50%,rgba(0,0,0,0)50%),url(desktop-wallpaper-efootball-efootball-2022.jpg);
     background-position: center;
     background-size: cover;
-    height: 310vh;
+    height: 320vh;
+}
+.design h1{
+    padding-left: 50px;
+    margin-top: 20px;
 }
 .grid-container{
     display: grid;
@@ -334,11 +339,15 @@ h5{
     font-family: Arial;
     letter-spacing: 1.2px;
     line-height: 30px;
+    position: absolute;
+    margin-top: 70px;
 }
 .document h1{
-    font-family: 'Times New Roman';
+    font-family: 'Arial';
     font-size: 50px;
     padding-left: 10px;
     margin-top: auto;
     letter-spacing: 2px;
+    position: absolute;
+    color: #bbc7c7;
 }
