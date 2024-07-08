@@ -1,10 +1,9 @@
 <?php
-session_start();
 require("connection.php");
 include("functions.php");
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
-    //something was posted
+    // something was posted
     $user_name = $_POST['user_name'];
     $password = $_POST['password'];
     $user_email = $_POST['user_email'];
@@ -12,27 +11,28 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     if (!empty($user_name) && !empty($user_email) && !empty($password) && !is_numeric($user_name) && !is_numeric($user_email)) {
         // save to database
         $user_id = random_num(20);
-        $hashed_password = password_hash($password, PASSWORD_BCRYPT);
-        
         $query = "INSERT INTO website (user_id, user_name, user_email, password) VALUES (?, ?, ?, ?)";
-        
-        if ($stmt = mysqli_prepare($conn, $query)) {
-            mysqli_stmt_bind_param($stmt, "ssss", $user_id, $user_name, $user_email, $hashed_password);
-            if (mysqli_stmt_execute($stmt)) {
-                echo "Thank you for Registering!";
-                header("Location: membership.php");
-                die;
-            } else {
-                echo "ERROR: Could not execute query: $query. " . mysqli_error($conn);
-            }
+
+        // prepare the query
+        $stmt = mysqli_prepare($conn, $query);
+        if ($stmt) {
+            // bind the parameters
+            mysqli_stmt_bind_param($stmt, "ssss", $user_id, $user_name, $user_email, $password);
+            // execute the statement
+            mysqli_stmt_execute($stmt);
+
+            // redirect to membership page
+            header("Location: membership.php");
+            die;
         } else {
-            echo "ERROR: Could not prepare query: $query. " . mysqli_error($conn);
+            echo "Failed to prepare the SQL statement.";
         }
     } else {
-        echo "Please enter some valid information";
+        echo "Please enter some valid information!";
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
