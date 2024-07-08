@@ -1,12 +1,3 @@
-<?php
-session_start();
-include("connection.php");
-include("functions.php");
-
-$user_data = check_login($conn);
-
-echo "This is index.php";
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,10 +15,10 @@ echo "This is index.php";
                 <ul>
                     <li><a href="index.php">HOME</a></li>
                     <li><a href="about.php">ABOUT</a></li>
-                    <li><a href="service.php">SERVICE</a></li>
                     <li><a href="design.php">DESIGN</a></li>
                     <li><a href="games.php">GAMES</a></li>
                     <li><a href="membership.php">MEMBERSHIP</a></li>
+                    <li><a href="update.php">UPDATE</a></li>
                     <li><a href="signup.php">SIGNUP</a></li>
                 </ul>
             </div>
