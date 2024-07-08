@@ -11,13 +11,13 @@
         <div class="menu">
             <ul>
                 <!--Creation of icons-->
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="service.html">SERVICE</a></li>
-                <li><a href="design.html">DESIGN</a></li>
-                <li><a href="games.html">GAMES</a></li>
-                <li><a href="membership.html">MEMBERSHIP</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="index.php">HOME</a></li>
+                <li><a href="about.php">ABOUT</a></li>
+                <li><a href="service.php">SERVICE</a></li>
+                <li><a href="design.php">DESIGN</a></li>
+                <li><a href="games.php">GAMES</a></li>
+                <li><a href="membership.php">MEMBERSHIP</a></li>
+                <li><a href="signup.php">SIGNUP</a></li>
             </ul>
         </div>
         <br>
